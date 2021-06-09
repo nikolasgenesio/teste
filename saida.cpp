@@ -14,14 +14,12 @@ int main(int argc, char argv)
     */
 
     char resposta;
-    int valor;
     cout << "Como voce gostaria de visualizar os dados? \n C para console\n F para arquivo" << endl;
     cin >> resposta;
 
     if (resposta == 'C' || resposta == 'c')
     {
-        valor = 10;
-        for (int i = 0; i < valor; i++)
+        for (int i = 0; i < 10; i++)
         {
             /*
             id artists = id tracks
@@ -32,14 +30,13 @@ int main(int argc, char argv)
     }
     else if (resposta == 'F' || resposta == 'f')
     {
-        valor = 100;
         //criando arquivo
         std::ofstream outFile;
         outFile.open("Texto.txt", ios::out);
         if (!outFile)
             return 0;
         //escrevendo no arquivo
-        for (int i = 0; i < valor; i++)
+        for (int i = 0; i < 100; i++)
         {
             /*
             id artists = id tracks
@@ -48,10 +45,10 @@ int main(int argc, char argv)
                     << "] Musica = [Id :" << i << " Nome: " << i << " Popularidade: " << i << " Duracao: " << i << " Explicito: " << i << " Data de Lancamento: " << i << " Dancabilidade: " << i << " Energia: " << i << " Chave: " << i << " Volume: " << i << " Modo: " << i << " Discurso: " << i << " Acustico: " << i << " Instrumental: " << i << " Vivacidade: " << i << " Valencia: " << i << " Tempo: " << i << " Assinatura de tempo: " << i << "]\n";
         }
         outFile.close();
-        return 0;
     }
     else
     {
         cout << "Opcao Invalida" << endl;
     }
+    return 0;
 }
